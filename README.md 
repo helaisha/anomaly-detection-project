@@ -1,0 +1,40 @@
+#  Anomaly Detection in Transaction Data
+
+This project explores **rule-based and ML-based anomaly detection** for financial transactions.  
+The goal is to detect suspicious activity not only by **amount**, but also by **behavioral inconsistencies** such as unusual hours, missing metadata, and rare device/location combinations.
+
+---
+
+## Features & Rules
+Transactions are flagged if they meet one or more criteria:
+
+- **High amount anomalies**: Amount > £4000
+- **Weekend transactions**: `is_weekend = True`
+- **Missing metadata**: No `device` or `location`
+- **Odd hours**: Transactions between 10 PM – 6 AM
+- **Rare patterns**: Uncommon device/location combos
+
+We combine these with:
+- **Isolation Forest** (unsupervised anomaly detection)
+- **DBSCAN clustering** (density-based anomaly detection)
+
+---
+
+##  Visualizations
+Some example plots included:
+
+- Anomaly rate by rule
+- High amount anomalies vs. normal transactions
+- Behavioral red flags (missing metadata, odd hours, weekends)
+
+Example:
+![plot](plots/anomaly_rate.png)
+
+---
+
+##  Tech Stack
+- **Python**: pandas, matplotlib, seaborn, scikit-learn
+- **Machine Learning**: Isolation Forest, DBSCAN
+- **Visualization**: Bar plots, scatter plots, anomaly overlays
+
+
