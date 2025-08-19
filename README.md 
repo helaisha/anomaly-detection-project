@@ -5,23 +5,23 @@ The goal is to detect suspicious activity not only by **amount**, but also by **
 
 ---
 ## Install dependencies
-
-```bash
+``` bash
 pip install -r requirements.txt
 ```
+
 
 ## Features & Rules
 Transactions are flagged if they meet one or more criteria:
 
--  High amount anomalies: Amount > £4000
-- Weekend transactions: `is_weekend = True`
--  Missing metadata: No `device` or `location`
--  Odd hours: Transactions between 10 PM – 6 AM
--  Rare patterns: Uncommon device/location combos
+- **High amount anomalies**: Amount > £4000
+- **Weekend transactions**: `is_weekend = True`
+- **Missing metadata**: No `device` or `location`
+- **Odd hours**: Transactions between 10 PM – 6 AM
+- **Rare patterns**: Uncommon device/location combos
 
 We combine these with:
--  Isolation Forest(unsupervised anomaly detection)
-- DBSCAN clustering(density-based anomaly detection)
+- **Isolation Forest** (unsupervised anomaly detection)
+- **DBSCAN clustering** (density-based anomaly detection)
 
 ---
 
@@ -38,8 +38,8 @@ Example:
 ---
 
 ##  Tech Stack
-- Python : pandas, matplotlib, seaborn, scikit-learn
-- Machine Learning : Isolation Forest, DBSCAN
-- Visualization : Bar plots, scatter plots, anomaly overlays
+- **Python**: pandas, matplotlib, seaborn, scikit-learn
+- **Machine Learning**: Isolation Forest, DBSCAN
+- **Visualization**: Bar plots, scatter plots, anomaly overlays
 
 
