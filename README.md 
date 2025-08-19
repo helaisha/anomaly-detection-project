@@ -4,6 +4,9 @@ This project explores **rule-based and ML-based anomaly detection** for financia
 The goal is to detect suspicious activity not only by **amount**, but also by **behavioral inconsistencies** such as unusual hours, missing metadata, and rare device/location combinations.
 
 ---
+## Install dependencies
+pip install -r requirements.txt
+
 
 ## Features & Rules
 Transactions are flagged if they meet one or more criteria:
